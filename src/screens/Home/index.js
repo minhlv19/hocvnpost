@@ -29,14 +29,12 @@ this.props.dispatchRemoveNote(value)
         alignItems: 'center',
         flex: 1,
       }}>
-        <ScrollView>
-        <Text>{this.state.value}</Text>
-        </ScrollView>
+
         {this.props.data.map(e=>{
           return(
           <View style={{flexDirection:'row'}}>
             <Text style={{marginRight:10}}>{e}</Text>
-            <TouchableOpacity onPress={() => this.onRemove(this.state.value)}>
+            <TouchableOpacity onPress={() => this.onRemove(e)}>
               <Text>Remove</Text>
             </TouchableOpacity>
 

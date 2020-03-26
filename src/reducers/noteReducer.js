@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
       return {...state, contents: [...state.contents, action.content]};
     case  actionTypes.REMOVE_NOTE:
       const removeData = state.contents.filter(e => e !== action.content);
-      return {...state,contents: [...state.contents, removeData]};
+      return {...state,contents: removeData};
     default:
       return state;
   }
